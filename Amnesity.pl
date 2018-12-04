@@ -71,5 +71,5 @@ print " (=>$host:$port~$proto<=)";
 send($sock, $size, $size); # Attack start################
 
 }
-print " Thank You For Using Amnesity As Your Preffered DDoS Tool\n";
+print "Thank You For Using Amnesity As Your Preffered DDoS Tool\n";
 
